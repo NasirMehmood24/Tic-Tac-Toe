@@ -1,0 +1,66 @@
+body {
+    background-color: antiquewhite;
+}
+
+.container {
+    text-align: center;
+    margin-top: 50px;
+  }
+  
+  .board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    width: 300px;
+    margin: 0 auto;
+  }
+  
+  .cell {
+    width: 100px;
+    height: 100px;
+    border: 2px solid #333;
+    font-size: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .X {
+    color: #ff5e5e;
+  }
+  
+  .O {
+    color: #5e8cff;
+  }
+  
+  .win-animation {
+    animation-name: win;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+  }
+  
+  @keyframes win {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.2);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  button {
+    margin-top: 20px;
+    font-size: 18px;
+    padding: 10px 20px;
+  }  
+
+  h1 {
+    text-align: center;
+    color: firebrick;
+  }
+  
